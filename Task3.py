@@ -2,8 +2,10 @@ import math
 
 # This is merge sort algorythm, it's complexity is nLogn, which is one of the best complexities (and best as far as i know for sorting)
 # we split array to smaller arrays untill we get arrays with size of 1, and after that we merge them, using rule of the smallest of pair
+# This complexety is achieved due to recursive divisio, to get time two times bigger we need multiply size by 2
+# (for example standart bubble sort will get complexity ^2) so the larger the size, the more visible the advantage.
 
-
+# Instead sorting bigger arrays we sort smaller one, without repetitive array checking, only comparing two numbers
 
 # Brief- Sorts array using merge sort
 #
@@ -46,7 +48,7 @@ def MergeSort(sorting_arr):
     if(len(sorting_arr)==1):
         return sorting_arr
     
-    
+
     # Sort two numbers    
     if(sorting_arr[0]>sorting_arr[1]):
         pop=sorting_arr[0]
